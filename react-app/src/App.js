@@ -10,11 +10,18 @@ const Products = withRouter(
   lazy(() => import(/* webpackChunkName: "products" */ './products/Products'))
 );
 
+function MyButton() {
+  function handleClick() {
+    alert('You clicked me!');
+  }
+
 class App extends Component {
   render() {
     return (
       <div>
-        <button>Press Me</button>
+        <button onClick={handleClick}>
+      Click me
+    </button>
         <HeaderBar />
         <div className="section columns">
           <NavBar />
