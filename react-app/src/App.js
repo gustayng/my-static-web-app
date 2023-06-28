@@ -20,7 +20,8 @@ class App extends Component {
           <main className="column">
             <Suspense fallback={<div>Loading...</div>}>
               <Switch>
-                <Redirect from="/" exact to="/about" />
+                <Redirect from="/" exact to="/products" />
+                <Route path="/products" component={Products} />
                 <Route path="/about" component={About} />
                 <Route exact path="**" component={NotFound} />
               </Switch>
