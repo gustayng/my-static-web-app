@@ -14,6 +14,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <button>Press Me</button>
         <HeaderBar />
         <div className="section columns">
           <NavBar />
