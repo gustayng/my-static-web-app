@@ -17,7 +17,8 @@ class Toggle extends React.Component {
   
     callFunction(){
       alert('Calling Function');
-      fetch('https://func-0001-staticwebapp-test.azurewebsites.net/api/ygge?code=L3dZfQpUgMhvGbtFKX3FxmUO_j4H9Q2tUlQUH6eznNQwAzFuzYLwNQ==')
+      // 'https://func-0001-staticwebapp-test.azurewebsites.net/api/ygge?code=L3dZfQpUgMhvGbtFKX3FxmUO_j4H9Q2tUlQUH6eznNQwAzFuzYLwNQ=='
+      fetch('/api/ygge?code=L3dZfQpUgMhvGbtFKX3FxmUO_j4H9Q2tUlQUH6eznNQwAzFuzYLwNQ==')
       .then((response) => response.json())
       .then((data) => {
          console.log(data);
