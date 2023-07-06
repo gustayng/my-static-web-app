@@ -18,11 +18,13 @@ class Toggle extends React.Component {
     callFunction(){
       alert('Calling Function');
       // 'https://func-0001-staticwebapp-test.azurewebsites.net/api/ygge?code=L3dZfQpUgMhvGbtFKX3FxmUO_j4H9Q2tUlQUH6eznNQwAzFuzYLwNQ=='
-      fetch('/api/ygge?code=L3dZfQpUgMhvGbtFKX3FxmUO_j4H9Q2tUlQUH6eznNQwAzFuzYLwNQ==')
+      // Local 'http://localhost:7132/api/ygge'
+      // Static Web App Linked '/api/ygge?code=L3dZfQpUgMhvGbtFKX3FxmUO_j4H9Q2tUlQUH6eznNQwAzFuzYLwNQ=='
+      fetch('http://localhost:7132/api/ygge')
       .then((response) => response.json())
       .then((data) => {
          console.log(data);
-         alert(data);
+         alert(data.date);
          //setPosts(data);
       })
       .catch((err) => {
@@ -38,7 +40,7 @@ class Toggle extends React.Component {
             {this.state.isToggleOn ? 'ON' : 'OFF'}
           </button>
           <button onClick={this.callFunction}>
-            
+            Call API
           </button>
         </div>
 
