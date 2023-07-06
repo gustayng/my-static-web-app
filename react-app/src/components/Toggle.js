@@ -20,7 +20,7 @@ class Toggle extends React.Component {
       // 'https://func-0001-staticwebapp-test.azurewebsites.net/api/ygge?code=L3dZfQpUgMhvGbtFKX3FxmUO_j4H9Q2tUlQUH6eznNQwAzFuzYLwNQ=='
       // Local 'http://localhost:7132/api/ygge'
       // Static Web App Linked '/api/ygge?code=L3dZfQpUgMhvGbtFKX3FxmUO_j4H9Q2tUlQUH6eznNQwAzFuzYLwNQ=='
-      fetch('http://localhost:7132/api/ygge')
+      fetch('/api/ygge?code=L3dZfQpUgMhvGbtFKX3FxmUO_j4H9Q2tUlQUH6eznNQwAzFuzYLwNQ==')
       .then((response) => response.json())
       .then((data) => {
          console.log(data);
